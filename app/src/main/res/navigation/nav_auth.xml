@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.indev.bwakotlinlaravel.ui.auth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registFragment"
+            app:destination="@id/registFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registFragment"
+        android:name="com.indev.bwakotlinlaravel.ui.auth.register.RegistFragment"
+        android:label="fragment_regist"
+        tools:layout="@layout/fragment_regist" >
+        <action
+            android:id="@+id/action_registFragment_to_registAddressFragment"
+            app:destination="@id/registAddressFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registAddressFragment"
+        android:name="com.indev.bwakotlinlaravel.ui.auth.register.RegistAddressFragment"
+        android:label="fragment_regist_address"
+        tools:layout="@layout/fragment_regist_address" >
+        <action
+            android:id="@+id/action_registAddressFragment_to_successRegistFragment"
+            app:destination="@id/successRegistFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/successRegistFragment"
+        android:name="com.indev.bwakotlinlaravel.ui.auth.register.SuccessRegistFragment"
+        android:label="fragment_success_regist"
+        tools:layout="@layout/fragment_success_regist" />
+</navigation>
